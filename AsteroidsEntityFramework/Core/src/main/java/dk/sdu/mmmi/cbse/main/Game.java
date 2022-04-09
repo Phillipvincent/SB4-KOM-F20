@@ -11,6 +11,7 @@ import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 import dk.sdu.mmmi.cbse.managers.GameInputProcessor;
+import dk.sdu.mmmi.cbse.enemysystem.EnemyControlSystem;
 import dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem;
 import dk.sdu.mmmi.cbse.playersystem.PlayerPlugin;
 import java.util.ArrayList;
@@ -45,7 +46,7 @@ public class Game
 
         IGamePluginService playerPlugin = new PlayerPlugin();
 
-        IEntityProcessingService playerProcess = new PlayerControlSystem();
+        IEntityProcessingService playerProcess = new EnemyControlSystem();
         entityPlugins.add(playerPlugin);
         entityProcessors.add(playerProcess);
         // Lookup all Game Plugins using ServiceLoader
