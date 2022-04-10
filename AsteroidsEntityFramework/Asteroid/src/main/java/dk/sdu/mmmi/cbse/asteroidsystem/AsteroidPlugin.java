@@ -38,6 +38,8 @@ public class AsteroidPlugin implements IGamePluginService, IPostEntityProcessing
 
         
         Entity asteroid = new Asteroid(Large);
+        asteroid.setRadius(15);
+
         asteroid.add(new MovingPart(0, speed, speed, 0));
         asteroid.add(new PositionPart(x, y, radians));
         asteroid.add(new LifePart(1,5));
